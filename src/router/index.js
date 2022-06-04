@@ -36,7 +36,6 @@ export const constantRoutes = [
     component: () => import('@/views/login/index'),
     hidden: true
   },
-
   {
     path: '/404',
     component: () => import('@/views/404'),
@@ -52,6 +51,19 @@ export const constantRoutes = [
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
       meta: { title: '首页', icon: 'dashboard' }
+    }]
+  },
+  {
+    path: '/goods',
+    component: Layout,
+    redirect: '/goods/goodsCategory',
+    name: 'Goods',
+    meta: { title: '商品功能', icon: 'el-icon-s-help' },
+    children: [{
+      path: 'goodsCategory',
+      name: 'GoodsCategory',
+      component: () => import('@/views/goods/goodsCategory/index'),
+      meta: { title: '商品分类', icon: 'dashboard' }
     }]
   },
   {
@@ -75,7 +87,6 @@ export const constantRoutes = [
       }
     ]
   },
-
   {
     path: '/form',
     component: Layout,
@@ -88,7 +99,6 @@ export const constantRoutes = [
       }
     ]
   },
-
   {
     path: '/nested',
     component: Layout,

@@ -1,7 +1,6 @@
 <template>
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
-
       <div class="title-container">
         <h3 class="title">登录页</h3>
       </div>
@@ -45,7 +44,7 @@
 
       <div class="tips">
         <span style="margin-right:20px;">用户名: admin</span>
-        <span> 密码: any</span>
+        <span> 密码: admin123</span>
       </div>
 
     </el-form>
@@ -75,7 +74,7 @@ export default {
     return {
       loginForm: {
         username: 'admin',
-        password: '111111'
+        password: 'admin123'
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],
